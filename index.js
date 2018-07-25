@@ -29,12 +29,23 @@ function getConnector(index, length) {
 
 function viewCart() {
   var text = "In your cart, you have "
+<<<<<<< HEAD
   if (cart.length === 0) {
     return "Your shopping cart is empty."
   }
   var i
   for (i = 0; i < cart.length; i++) { 
     text += getConnector(i, cart.length)
+=======
+  var i;
+  if (cart.length === 0) {
+    return "Your shopping cart is empty."
+  }
+  for (i = 0; i < cart.length; i++) { 
+    if (i > 0) {
+      text += ", and "
+    }
+>>>>>>> 25e25e45816cf3cb1ad493f96d1720232fba34b1
     text += `${cart[i].itemName} at $${cart[i].itemPrice}`
   }
   return text + '.'
